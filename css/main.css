@@ -1,0 +1,9 @@
+body{
+    height: 100%;
+}
+.container{
+    margin: 20px auto
+}
+#buttonArea{
+    margin-top: 20px;
+}
