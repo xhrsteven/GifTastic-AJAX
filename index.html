@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
-    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
     <div class="jumbotron">
-        <h1 class="text-center">Dynamic Search</h1>
+        <h1 class="text-center">GifTastic Search</h1>
    
     <div id="buttonArea"></div> </div>
     <div class="container">
@@ -26,6 +28,28 @@
                     <input id="find-gif" type="submit" value="Submit" class="btn btn-primary">
                 </form>
             </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Share Your Favorite Gifs</h4>
+                </div>
+                <div class="modal-body text-center">
+                    <i class="fa fa-facebook-square fa-2x"><h4><a href="https://en-gb.facebook.com/login/">FaceBook</a></h4></i>
+                    <i class="fa fa-twitter-square fa-2x"><h4><a href="https://twitter.com/twitt_login">Twitter</a></h4></i>
+                    <i class="fa fa-instagram fa-2x"><h4><a href="https://www.instagram.com/">Instagram</a></h4></i>
+                    <i class="fa fa-google-plus-square fa-2x"><h4><a href="https://plus.google.com/">Google+</a></h4></i>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+    
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

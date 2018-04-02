@@ -15,3 +15,44 @@ body{
     margin-right: 15px;
     text-align: left;
 }
+p{
+    /* width: 100%; */
+    float: left;
+}
+.fa fa-heart-o{
+    /* width: 100%; */
+    clear: both;
+}
+.fa fa-heart-o{
+float: right;
+}
+
+
+@media screen and (max-width:640px){
+   #buttonArea{
+        margin-top:20px;
+    }
+    #animalDiv{
+        display: inline-block;
+    }
+    p{
+        float: left;
+    }
+    .fa fa-heart-o{
+        float: right;
+    } 
+}
+@media screen and (max-width:320px){
+    #buttonArea{
+        margin-top:20px;
+    }
+    #animalDiv{
+        display: inline-block;
+    }
+    p{
+        float: left;
+    }
+    .fa fa-heart-o{
+        float: right;
+    }
+}

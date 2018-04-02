@@ -31,7 +31,7 @@
             var animal = $(this).attr('data-animal');
             console.log(animal);
             var api_key = 'Qv6Nsrw448xBX88u97JIICJ5rG7q6Iz2';
-            var queryUrl = 'http://api.giphy.com/v1/gifs/search?q='+ animal +'&api_key='+ api_key+'&limit=9';
+            var queryUrl = 'http://api.giphy.com/v1/gifs/search?q='+ animal +'&api_key='+ api_key+'&limit=10';
             
             $.ajax({
                 url: queryUrl,
@@ -42,8 +42,19 @@
                 for (var i = 0; i < result.length; i++) {
                     var animalDiv = $('<div>');
                     animalDiv.attr('id','animalDiv');
-                    var p = $('<p>').text(`Rating: ${result[i].rating}`);
+                    var p = $("<p>").text(`Rating: ${result[i].rating}`);
+                    var button = $('<button>');
+                    // button.attr('id','button'+i);
+                    button.addClass('fa fa-heart-o');
+                    button.attr({
+                        'data-toggle':'modal',
+                        'data-target':'#myModal'
+                    });
                     var animalImg = $('<img>');
+                    animalImg.attr({
+                        'width': '100%',
+                        'height': '200px'
+                    });
                     animalImg.attr('src', result[i].images.downsized.url);
                     animalImg.attr('data-animate', result[i].images.downsized.url)
                     animalImg.attr("data-still", result[i].images.downsized_still.url);
@@ -51,13 +62,15 @@
                     animalImg.addClass('gif');
                     // =============================================
                     animalImg.attr('id','animalImg');
-                    // animalImg.attr('src','../img/heartbutton.png');
                     animalDiv.append(p);
+                    animalDiv.append(button);
                     animalDiv.append(animalImg);
+                    
                     $('#gif-view').prepend(animalDiv);
 
-                    $(document).on('click', '.gif',function () {
+                    $('#animalImg').on('click',function () {
                         var state = $(this).attr('data-state');
+                        // console.log($('img').state);
                         var animate = $(this).attr('data-animate');
                         var still = $(this).attr('data-still');
 
@@ -71,11 +84,12 @@
                         }
                     });
 
+                
 
                 }
             })
         });
-    
+        
         renderButtons();
         
 // })
