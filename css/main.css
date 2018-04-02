@@ -7,3 +7,11 @@ body{
 #buttonArea{
     margin-top: 20px;
 }
+#gif-view{
+    height: 100%;
+}
+#animalDiv{
+    display: inline-block;
+    margin-right: 15px;
+    text-align: left;
+}
